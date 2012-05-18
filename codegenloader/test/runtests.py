@@ -7,6 +7,7 @@ TEST_MODULES = [
     'codegenloader.test.protobuf_test',
     ]
 
+
 def all():
     return unittest.defaultTestLoader.loadTestsFromNames(TEST_MODULES)
 

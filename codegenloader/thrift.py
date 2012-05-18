@@ -6,6 +6,7 @@ import subprocess
 import tempfile
 from codegenloader.base import CodeGenLoader
 
+
 class ThriftLoader(CodeGenLoader):
     def thriftname(self, relname):
         return os.path.abspath(os.path.join(self.basedir, relname + '.thrift'))

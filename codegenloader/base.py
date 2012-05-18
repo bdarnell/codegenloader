@@ -5,6 +5,7 @@ import sys
 
 _counter = itertools.count()
 
+
 class CodeGenLoader(object):
     """Abstract base class for code generation import hooks.
 

@@ -5,6 +5,7 @@ import subprocess
 import tempfile
 from codegenloader.base import CodeGenLoader
 
+
 class ProtobufLoader(CodeGenLoader):
     def protoname(self, relname):
         assert relname.endswith("_pb2")
