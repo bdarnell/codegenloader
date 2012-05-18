@@ -35,16 +35,16 @@ class ProtobufLoader(CodeGenLoader):
 
 
 def make_path(modname, basedir):
-    """Returns a object to be set as __path__.
+    """Returns a object to be set as ``__path__``.
 
     This is the visible entry point to this module.  To use it,
-    assign the result of this function to ``__path__``:
+    assign the result of this function to ``__path__``::
 
         import dropbox.codegenloader.protobuf
         __path__ = dropbox.codegenloader.protobuf.make_path(__name__, "proto")
 
-    The first argument should always be __name__; the second is a
-    directory name that contains the .proto files. (relative to the
-    file where make_path is called).
+    The first argument should always be ``__name__``; the second is a
+    directory name that contains the ``.proto`` files. (relative to the
+    file where `make_path` is called).
     """
     return ProtobufLoader.register(modname, basedir)
