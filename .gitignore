@@ -1,2 +1,4 @@
 *.pyc
 /env/
+MANIFEST
+.tox/
