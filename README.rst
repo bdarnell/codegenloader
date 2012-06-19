@@ -33,3 +33,9 @@ Add the following two lines to `mypackage/proto/__init__.py`::
 Now, assuming `foo.proto` exists in in `mypackage/proto/`, you can do::
 
     from mypackage.proto.foo_pb2 import Foo
+
+More info
+---------
+
+The source code is hosted at https://github.com/bdarnell/codegenloader
+Detailed documentation can be found at http://codegenloader.readthedocs.org
