@@ -17,4 +17,5 @@ setup(
         "codegenloader.test": ["thrift/simple.thrift"],
         },
     author="Ben Darnell",
+    url="https://github.com/bdarnell/codegenloader",
     )

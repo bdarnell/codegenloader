@@ -33,19 +33,3 @@ Add the following two lines to `mypackage/proto/__init__.py`::
 Now, assuming `foo.proto` exists in in `mypackage/proto/`, you can do::
 
     from mypackage.proto.foo_pb2 import Foo
-
-Detailed docs
--------------
-
-.. toctree::
-
-   base
-   protobuf
-   thrift
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
