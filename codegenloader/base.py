@@ -6,6 +6,24 @@ import sys
 _counter = itertools.count()
 
 
+if sys.version_info > (3,):
+    exec("""
+def exec_in(code, glob, loc=None):
+    if isinstance(code, str):
+        code = compile(code, '<string>', 'exec', dont_inherit=True)
+    exec(code, glob, loc)
+""")
+else:
+    exec("""
+def exec_in(code, glob, loc=None):
+    if isinstance(code, basestring):
+        # exec(string) inherits the caller's future imports; compile
+        # the string first to prevent that.
+        code = compile(code, '<string>', 'exec', dont_inherit=True)
+    exec code in glob, loc
+""")
+
+
 class CodeGenLoader(object):
     """Abstract base class for code generation import hooks.
 
@@ -26,7 +44,7 @@ class CodeGenLoader(object):
         Arguments are passed (eventually) to `initialize`.
         """
         cls._install_hook()
-        hook_key = '__codegenloader_%d' % _counter.next()
+        hook_key = '__codegenloader_%d' % next(_counter)
         if not hasattr(cls, "_register_args"):
             cls._register_args = {}
         cls._register_args[hook_key] = (args, kwargs)
@@ -108,7 +126,7 @@ class CodeGenLoader(object):
         mod.__loader__ = self
         if is_pkg:
             mod.__path__ = [self.hook_key]
-        exec contents in mod.__dict__
+        exec_in(contents, mod.__dict__)
         return mod
 
     # Internal methods
