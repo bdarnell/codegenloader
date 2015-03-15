@@ -18,4 +18,5 @@ setup(
         },
     author="Ben Darnell",
     url="https://github.com/bdarnell/codegenloader",
+    description="Hook that transparently runs a code generator at import time",
     )
