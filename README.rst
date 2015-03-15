@@ -17,10 +17,11 @@ Installation
 Prerequisites
 -------------
 
-CodeGenLoader runs on Python 2.5, 2.6, 2.7, pypy, and Jython.  The base
-class does not have any external dependencies, but to use the Thrift or
-Protocol Buffer subclasses you will need the thrift or protobuf packages
-installed.
+CodeGenLoader runs on Python 2 (2.5+) and 3, including pypy and
+jython.  The base class does not have any external dependencies, but
+to use the Thrift or Protocol Buffer subclasses you will need the
+thrift or protobuf packages installed. Note that protobuf 3.0.0
+(currently in alpha) is required to use protobuf on Python 3.
 
 Example
 -------
