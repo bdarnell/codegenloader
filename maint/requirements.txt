@@ -15,7 +15,7 @@ virtualenv==1.7.1.2
 
 # Indirect dependencies
 Jinja2==2.11.3
-Pygments==1.5
+Pygments==2.7.4
 docutils==0.9.1
 py==1.4.9
 wsgiref==0.1.2
