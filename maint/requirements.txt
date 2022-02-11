@@ -1,7 +1,7 @@
 # Frozen pip requirements for tools used in the development of codegenloader
 
 # Direct dependencies
-protobuf==2.4.1
+protobuf==3.15.0
 thrift==0.8.0
 
 # Other useful tools
